@@ -44,7 +44,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = []
 
-OWN_APPS = [users.apps.UsersConfig]
+OWN_APPS = ['users.apps.UsersConfig']
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + OWN_APPS
 
