@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
+import users.apps
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,7 +44,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = []
 
-OWN_APPS = ['visualization.apps.VisualizationConfig']
+OWN_APPS = [users.apps.UsersConfig]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + OWN_APPS
 
@@ -128,3 +130,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'users.CustomUser'
