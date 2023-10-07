@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from users.manager import CustomUserManager
 
 
+
 class CustomUser(AbstractUser):
     GENDERS = (
         ('m', 'Мужчина'),
