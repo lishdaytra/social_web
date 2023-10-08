@@ -15,8 +15,8 @@ class CustomUser(AbstractUser):
     email = models.EmailField(_('email address'), unique=True)
     gender = models.CharField('Пол', max_length=1, choices=GENDERS, default='')
     birth_date = models.DateField('Дата рождения', default='2000-01-01')
-    first_name = models.CharField(verbose_name='Фамилия', max_length=150, blank=True)
-    last_name = models.CharField(verbose_name='Имя', max_length=150, blank=True)
+    first_name = models.CharField('Фамилия', max_length=150, blank=True)
+    last_name = models.CharField('Имя', max_length=150, blank=True)
 
 
     USERNAME_FIELD = 'email'
