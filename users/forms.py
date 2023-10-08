@@ -9,10 +9,10 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = ('email', 'gender', 'birth_date')
+        fields = ('email', 'gender', 'birth_date', 'groups')
 
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
-        fields = ('email', 'gender', 'birth_date')
+        fields = ('email', 'gender', 'birth_date', 'groups')
