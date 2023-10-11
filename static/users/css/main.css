@@ -31,19 +31,36 @@ font-size: 28px;
 
 aside ul {list-style: none}
 aside ul li {
-color: #FFF;
+color: #fff;
 display: block;
 margin-top: 20px;
 margin-left: -32px;
-transition: all .3s ease;
+transition: transform .3s ease;
 }
 
 aside ul a {
-list-style: none
-text-decoration: none}
+color: #47A76A;
+list-style: none;
+text-decoration: none;
+}
 
 aside ul li:hover, aside ul a:hover {
-color: #eb5959
+color: #eb5959;
 text-decoration: none;
 transform: scale(1.03);
 }
+
+main .features {
+float:left;
+color: #fff;
+margin-top: 10px;
+margin-left: 10px;
+text-align: left;
+width: 40%
+}
+
+main .features h1 {
+font-size: 30px;
+color: #fff;
+}
+main. features p {max-width: 400px; margin: 20px auto}
