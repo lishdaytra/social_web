@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 class SignUp(generic.CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("login")
-    template_name = "signup.html"
+    template_name = "registration/signup.html"
 
     # Set user Group on registration
     def post(self, request, *args, **kwargs):
