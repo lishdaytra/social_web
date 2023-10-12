@@ -1,6 +1,6 @@
 from django.urls import reverse_lazy
 from django.views import generic
-from users.forms import CustomUserCreationForm, UserImage
+from users.forms import CustomUserCreationForm, UserImageForm
 from django.contrib.auth.models import Group
 from django.shortcuts import render, redirect
 
@@ -26,4 +26,13 @@ class SignUp(generic.CreateView):
 
 def image_request(request):
     if request.method == 'POST':
-        form = UserImage
+        form = UserImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+
+            img_object = form.instance
+            return render(request, 'users/image_form.html', {'form': form, 'img_obj': img_object})
+        else:
+            form = UserImageForm()
+
+        return render(request, 'users/image_form.html', {'form': form})
