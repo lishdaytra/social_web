@@ -17,7 +17,7 @@ class CustomUserChangeForm(UserChangeForm):
         model = CustomUser
         fields = ('email', 'first_name', 'last_name', 'gender', 'birth_date', 'groups')
 
-class UserImage(forms.ModelForm):
+class UserImageForm(forms.ModelForm):
     class Meta:
         models = UserImage
         fields = ('image', 'user')
