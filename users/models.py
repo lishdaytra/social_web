@@ -26,5 +26,10 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.email
 
+class UserImage(models.Model):
+    image = models.ImageField(upload_to='images')
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+
+
 
 # Create your models here.
