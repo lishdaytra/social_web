@@ -30,8 +30,8 @@ def image_request(request):
         if form.is_valid():
             form.save()
 
-            img_object = form.instance
-            return render(request, 'users/image_form.html', {'form': form, 'img_obj': img_object})
+            img_obj = form.instance
+            return render(request, 'users/image_form.html', {'form': form, 'img_obj': img_obj})
         else:
             form = UserImageForm()
 
