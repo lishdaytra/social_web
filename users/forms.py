@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django import forms
 from users.models import CustomUser, UserImage
 from django.contrib.auth.models import Group
+from django.contrib.auth.models import AnonymousUser
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -17,7 +18,8 @@ class CustomUserChangeForm(UserChangeForm):
         model = CustomUser
         fields = ('email', 'first_name', 'last_name', 'gender', 'birth_date', 'groups')
 
+
 class UserImageForm(forms.ModelForm):
     class Meta:
-        models = UserImage
-        fields = ('image', 'user')
+        model = UserImage
+        fields = ('image',)
